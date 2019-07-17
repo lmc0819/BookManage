@@ -217,7 +217,10 @@
 					                    </div>
 					                    <div class="form-group">
 					                        <label for="message-text" class="control-label">性别:</label>
-					                        <input type="text" class="form-control" id="recipient-name3" name="sex">
+					                        
+					                        <label><input type="radio" name="sex"  id="isMale" value="男">男生</label>
+		                                    <label><input type="radio" name="sex"  id="isFemale" value="女">女生</label>
+					                        
 					                    </div>
 					                    <div class="form-group">
 					                        <label for="message-text" class="control-label">电话:</label>
@@ -269,11 +272,19 @@
         		document.getElementById("recipient-name").value=readerid;
         		document.getElementById("recipient-name1").value=readername;
         		document.getElementById("recipient-name2").value=rpassword;
-        		document.getElementById("recipient-name3").value=sex;
+        		
         		document.getElementById("recipient-name4").value=mobile;
         		document.getElementById("recipient-name5").value=department;
         		document.getElementById("recipient-name6").value=sxtime;
         		document.getElementById("recipient-name7").value=borrownumber;
+        		var st="男"
+        		if(sex==st){
+        	        $("#isMale").attr("checked","checked");
+        	        $("#isFemale").removeAttr("checked");
+        	    }else{
+        	        $("#isFemale").attr("checked","checked");
+        	        $("#isMale").removeAttr("checked");
+        	    }
         	}
         </script>
 	</body>
