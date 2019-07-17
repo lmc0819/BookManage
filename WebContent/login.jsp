@@ -121,8 +121,8 @@
 </body>
 <script type="text/javascript ">
 	 function myReload() {
-	    document.getElementById("CreateCheckCode ").src = 
-	    	document.getElementById("CreateCheckCode ").src+ "?nocache=" + new Date().getTime();
+	    document.getElementById("CreateCheckCode").src = 
+	    	document.getElementById("CreateCheckCode").src+ "?nocache=" + new Date().getTime();
 	  }
 	  	
 	$(" input[name='username' ] ").bind("blur ",function(){
