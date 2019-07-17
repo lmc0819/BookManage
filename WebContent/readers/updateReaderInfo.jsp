@@ -92,7 +92,7 @@
 		<!--表单开始-->
 			<form onsubmit="return checkAll()" class="form-horizontal" role="form" action="${pageContext.request.contextPath }/readerServlet?act=updateInfo" method="post" id="readerInfoFrom"> 
 							
-				<div class="form-group">
+				<div class="form-group" style="text-align: center;">
 					<label for="lastname" class="col-sm-2 control-label">用户名<i style="color:red">*</i></label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="readername"  value="${readerInfo.readername }"
@@ -100,7 +100,7 @@
 					</div>
 					<span style="color:red"></span>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="text-align: center;">
 					<label for="lastname" class="col-sm-2 control-label">手机号码<i style="color:red">*</i></label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="mobile" name="mobile" value="${readerInfo.mobile }" onblur="checkMobile()">
@@ -108,7 +108,7 @@
 					<span id="mobileMsg" style="color:red"></span>
 				</div>
 		
-				<div class="form-group">
+				<div class="form-group" style="text-align: center;">
 					<div class="col-sm-offset-1 col-sm-10">					
 						<div class="radio">	
 							<label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别<i style="color:red">*</i>:</b></label>
@@ -134,9 +134,9 @@
 				
 				
 				
-				<div class="form-group">
+				<div class="form-group" style="text-align: center;">
 				    <label for="email" class="col-sm-2 control-label">院系：<i style="color:red">*</i></label>					       
-				    <div class="col-sm-3">					  
+				    <div class="col-sm-4">					  
 						<select class="form-control" name="department">
 							<option value="经济学院"
 							 <c:if test="${readerInfo.department == '经济学院'}">
@@ -238,19 +238,21 @@
 						<input type="file" name="file" />
 					</div>					
 				</div>	 -->			   
-				<div class="form-group">
+				<div class="form-group" >
 					<label for="lastname" class="col-sm-2 control-label">备注信息</label>
 					<div class="col-sm-4">
-						<textarea name="remarks" rows="3" cols="50" placeholder="备注信息">${readerInfo.remarks }
+						<textarea name="remarks" rows="3" cols="48" placeholder="备注信息">${readerInfo.remarks }
 						</textarea>
 					</div>
-					<span style="color:blue">表单验证信息</span>
+					
 				</div>
-   				    
-				<div class="form-group col-sm-3" >
+   				
+   				 
+				<div class="form-group " style="text-align: center;">
 					<button type="submit" class="btn btn-primary" onclick="updateInfo()">修改</button>  
 					<button type="reset" class="btn btn-default">重置</button> 				 				    
 				</div>   
+				 
 								
 		    </form>
 			
