@@ -99,7 +99,7 @@ public class LoginServlet extends HttpServlet {
 				
 			}else{
 				request.setAttribute("errorMsg", "用户不存在!请注册");
-				request.getRequestDispatcher("login1.jsp").forward(request, response);
+				request.getRequestDispatcher("login.jsp").forward(request, response);
 			}	
 			//用户登录结束
 	}else{			
