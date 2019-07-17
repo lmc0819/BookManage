@@ -76,8 +76,9 @@
 						</div>
 						<span id="passwordMsg" style="color:red;" class="tips"></span>
 						
-						<br />
-						<span>忘记密码？<a href="forgetpassword.jsp">找回密码</a></span>
+						
+						
+						
 					</div>
 
 					<div class="row">
@@ -102,7 +103,8 @@
 						<input type="radio" name="type" value="用户" checked>用户&nbsp;&nbsp;&nbsp;&nbsp;
 						<input type="radio" name="type" value="管理员">管理员
 					</div>
-					<div class="form-group">
+					
+					<div class="form-group" >
 						<input id="remember" name="remember" value="true" type="checkbox" checked="checked" />记住密码
 					</div>
 					<div class="form-group">
@@ -111,7 +113,8 @@
 
 					<div class="form-group">
 						<input type="button" value="立&nbsp;&nbsp;即&nbsp;&nbsp;注&nbsp;&nbsp;册" class="form-control btn btn-warning" onclick="window.location.href='register.jsp'"  >
-            </div>
+                    </div>
+                    <div style="text-align: right;"><span>忘记密码？<a href="forgetpassword.jsp">找回密码</a></span></div>
         </form>
     </div>
 </div>
@@ -120,9 +123,9 @@
 
 </body>
 <script type="text/javascript ">
-	 function myReload() {
-	    document.getElementById("CreateCheckCode").src = 
-	    	document.getElementById("CreateCheckCode").src+ "?nocache=" + new Date().getTime();
+	  function myReload() {
+		    document.getElementById("CreateCheckCode").src = 
+		    	document.getElementById("CreateCheckCode").src+ "?nocache=" + new Date().getTime();
 	  }
 	  	
 	$(" input[name='username' ] ").bind("blur ",function(){
@@ -160,7 +163,7 @@
 		}
 	})
 	
-	$(" input[name='checkCode' ] ").bind("blur ",function(){
+	$(" input[name='checkCode' ] ").bind("input propertychange",function(){
 		var code = $(this).val().trim();
 		if(code.length==0){
 		   $("#codeMsg").html("请输入验证码");

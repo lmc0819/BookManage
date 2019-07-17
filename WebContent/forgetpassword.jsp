@@ -24,8 +24,9 @@
                     <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>                 
                		<input id="phone" name="phonenumber" class="form-control" type="text"  required  autocomplete="off" placeholder="请输入手机号码"  onblur="checkPhone()">	
                		<span id="phoneError" style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
-               		<span id="phoneSuccess" style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
-                </div>            
+               		<span id="phoneSuccess" style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>             		
+                </div>
+                <span id="phoneMsg" style="color:red;" class="tips"></span>            
             </div>
 
             <div class="row">
@@ -39,6 +40,7 @@
                		        <span id="codeError" style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
                         </div>              
                     </div>
+                     <span id="codeMsg" style="color:red;" class="tips"></span>
                 </div>
                 <div class="col-xs-3 text-center" style="padding-top: 26px">
                 	  <input disabled="disabled" id="getCode" name="getCode" class="btn btn-primary"  type="button" value="发送验证码"/>  
@@ -53,7 +55,8 @@
                		<input name="newPwd" type="password"  required  autocomplete="off" placeholder="请输入新密码" maxlength="20" class="form-control" onblur="checkNewPwd()">
                		<span id="newPwdSuccess" style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
                		<span id="newPwdError" style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
-                </div>              
+                </div> 
+                 <span id="newpwdMsg" style="color:red;" class="tips"></span>             
             </div>
 
             <div id="rePwdDiv" class="form-group has-feedback">
@@ -65,7 +68,7 @@
                 	<span id="rePwdSuccess" style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
                		<span id="rePwdError" style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
-                
+                 <span id="repwdMsg" style="color:red;" class="tips"></span>
             </div>
 
 			
@@ -88,7 +91,7 @@
 		     function checkPhone(){
 		    	 var phonenumber = $("#phone").val().trim();
 					if(phonenumber.length==0){												
-						alert("手机号码不能为空")
+						$("#phoneMsg").html("请输入手机号码")
 						$("#phoneDiv").attr("class","form-group has-error has-feedback")
 						$("#phoneError").css("display","block")
 						return false;
@@ -96,12 +99,13 @@
 					
 					var reg= /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/;
 					if(!reg.test(phonenumber)){																	 
-						 alert("手机号码不合法，请重新输入！");
+						 $("#phoneMsg").html("手机号码不合法！请检查")
 						 $("#phoneDiv").attr("class","form-group has-error has-feedback")
 						 $("#phoneError").css("display","block")
 						 $("#getCode").attr("disabled","disabled")
 						 return false;
 					}
+					$("#phoneMsg").html("")
 					     $("#phoneDiv").attr("class","form-group has-success has-feedback")
 						 $("#phoneError").css("display","none")
 						 $("#phoneSuccess").css("display","block")
@@ -114,18 +118,19 @@
 		     function checkPhoneCode(){
 		    	 var code = $("#checkCode").val().trim();
 		    	 if(code.length==0){						
-					alert("验证码不能为空！")
+					$("#codeMsg").html("请输入验证码！")
 					$("#codeDiv").attr("class","form-group has-error has-feedback")
 					$("#codeError").css("display","block")
 					return false;
 				 }
 		    	 var reg = /^\d{6}$/;
 		    	 if(!reg.test(code)){
-		    		 alert("验证码必须是六位数字");
+		    		 $("#codeMsg").html("验证码不合法！");
 		    		 $("#codeDiv").attr("class","form-group has-error has-feedback")
 					 $("#codeError").css("display","block")
 		    		 return false;
 		    	 }
+		    	 $("#codeMsg").html("");
 		    	 $("#codeDiv").attr("class","form-group has-success has-feedback")
 				 $("#codeError").css("display","none")
 				 $("#codeSuccess").css("display","block")
@@ -135,18 +140,19 @@
 			function checkNewPwd(){
 				var newPwd = $("input[name='newPwd']").val().trim();
 				if(newPwd.length==0){
-					alert("请输入密码！");
+					$("#newpwdMsg").html("请输入密码！")
 					$("#newPwdDiv").attr("class","form-group has-error has-feedback")
 					$("#newPwdError").css("display","block")
 					return false;
 				}
 				var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;
 				if(!reg.test(newPwd)){
-					alert("密码不合法(6-18位数字字母组合)");
+					$("#newpwdMsg").html("密码不合法，密码长度6-18位，必须包含密码和数字！")
 					$("#newPwdDiv").attr("class","form-group has-error has-feedback")
 					$("#newPwdError").css("display","block")
 					return false;
 				}
+				 $("#newpwdMsg").html("")
 				 $("#newPwdDiv").attr("class","form-group has-success has-feedback")
 				 $("#newPwdError").css("display","none")
 				 $("#newPwdSuccess").css("display","block")
@@ -159,7 +165,7 @@
 					var rePwd = $("input[name='rePwd']").val().trim();
 					var newPwd = $("input[name='newPwd']").val().trim();
 					if(rePwd.length==0){
-						alert("请输入密码！");
+						$("#repwdMsg").html("请确认密码")
 						$("#rePwdDiv").attr("class","form-group has-error has-feedback")
 					    $("#rePwdError").css("display","block")
 					    $("#submit").attr("disabled","disabled");
@@ -167,12 +173,13 @@
 						
 					}				
 					if(rePwd!=newPwd){
-						alert("两次密码输入不一致，请检查！");
+						$("#repwdMsg").html("两次密码输入不一致，请检查！")						
 						$("#rePwdDiv").attr("class","form-group has-error has-feedback")
 					    $("#rePwdError").css("display","block")
 					    $("#submit").attr("disabled","disabled");
 						return false;
 					}	
+					 $("#repwdMsg").html("")
 					 $("#rePwdDiv").attr("class","form-group has-success has-feedback")
 					 $("#rePwdError").css("display","none")
 					 $("#rePwdSuccess").css("display","block")	

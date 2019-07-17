@@ -125,7 +125,7 @@
 			
 			
 			
-			<form class="navbar-form navbar-left" role="search" action="/BookManager/admin">
+			<form style="padding-left:0px" class="navbar-form navbar-left" role="search" action="/BookManager/admin">
 			            <input type="hidden" class="form-control" name="act"  value="SelectBook"/>
 						<div class="form-group">
 							<input type="text" class="form-control" name="value" />

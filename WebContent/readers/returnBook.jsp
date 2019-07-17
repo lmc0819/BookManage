@@ -30,13 +30,7 @@
 <div class="container">
 	
 	
-	
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
+
 	<!-- <div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="alert alert-dismissable alert-info">
@@ -49,30 +43,30 @@
 			</div>
 		</div>
 	</div> -->
-			<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+			<nav class="navbar navbar-default  navbar-inverse" role="navigation">
 				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a style="font-size:20px"  class="navbar-brand" href="#">欢迎使用图书管理系统</a>
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a    class="navbar-brand" href="#">欢迎使用图书管理系统</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li >
-							 <a style="font-size:20px" href="${pageContext.request.contextPath }/booksServlet?act=search">馆藏查询</a>
+							 <a   href="${pageContext.request.contextPath }/booksServlet?act=search">馆藏查询</a>
 						</li>
 						
 						<li class="dropdown">
-							 <a style="font-size:20px" href="#" class="dropdown-toggle" data-toggle="dropdown">借阅中心<strong class="caret"></strong></a>
+							 <a   href="#" class="dropdown-toggle" data-toggle="dropdown">借阅中心<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 							
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/booksServlet?act=search">我要借阅</a>
+									 <a   href="${pageContext.request.contextPath }/booksServlet?act=search">我要借阅</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/borrowServlet?act=unReturnList">我要归还</a>
+									 <a   href="${pageContext.request.contextPath }/borrowServlet?act=unReturnList">我要归还</a>
 								</li>
 								<li class="divider">
 								</li>
@@ -83,28 +77,28 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 							
-							 <a style="font-size:20px" href="#">欢迎：${readerInfo.readername } 用户</a>
+							 <a   href="#">欢迎：${readerInfo.readername } 用户</a>
 						</li>
 						<li>
 							
-							 <a style="font-size:20px" href="${pageContext.request.contextPath }/borrowServlet?act=list">我的借阅记录</a>
+							 <a   href="${pageContext.request.contextPath }/borrowServlet?act=list">我的借阅记录</a>
 						</li>
 						<li class="dropdown">
-							 <a style="font-size:20px" href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
+							 <a   href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								
 								<li>
-									 <a style="font-size:20px" href="readers/updateReaderInfo.jsp">个人信息修改</a>
+									 <a   href="readers/updateReaderInfo.jsp">个人信息修改</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="readers/updateReaderPassword.jsp">密码修改</a>
+									 <a   href="readers/updateReaderPassword.jsp">密码修改</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/logoutServlet">退出</a>
+									 <a   href="${pageContext.request.contextPath }/logoutServlet">退出</a>
 								</li>
 								<li class="divider">
 								</li>
@@ -158,6 +152,7 @@
 				</c:forEach>	
 				</tbody>
 			</table>
+			<div style="text-align: center;">
 			<ul class="pagination">
 					<li 
 					<c:if test="${currentPage==1}" >class="disabled"</c:if>
@@ -179,7 +174,7 @@
 						 <a href="borrowServlet?act=unReturnList&currentPage=${currentPage==totalPage?totalPage:currentPage+1}">下一页</a>
 					</li>
 				</ul>
-				
+			</div>	
 		</div>
 	</div>
 </div>

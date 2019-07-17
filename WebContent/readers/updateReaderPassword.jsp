@@ -13,13 +13,8 @@
 	<body>
 <div class="container">
 	
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />	
-			<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	
+			<nav class="navbar navbar-default  navbar-inverse" role="navigation">
 				<div class="navbar-header">
 					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a style="font-size: 20px;" class="navbar-brand" href="#">欢迎使用图书管理系统</a>
 				</div>
@@ -27,22 +22,22 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li >
-							 <a style="font-size:20px" href="${pageContext.request.contextPath }/booksServlet?act=search">馆藏查询</a>
+							 <a   href="${pageContext.request.contextPath }/booksServlet?act=search">馆藏查询</a>
 						</li>
 						
 						<li class="dropdown">
-							 <a style="font-size:20px" href="#" class="dropdown-toggle" data-toggle="dropdown">借阅中心<strong class="caret"></strong></a>
+							 <a   href="#" class="dropdown-toggle" data-toggle="dropdown">借阅中心<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 							
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/booksServlet?act=search">我要借阅</a>
+									 <a   href="${pageContext.request.contextPath }/booksServlet?act=search">我要借阅</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/borrowServlet?act=unReturnList">我要归还</a>
+									 <a   href="${pageContext.request.contextPath }/borrowServlet?act=unReturnList">我要归还</a>
 								</li>
 								<li class="divider">
 								</li>
@@ -53,28 +48,28 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 							
-							 <a style="font-size:20px" href="#">欢迎：${readerInfo.readername } 用户</a>
+							 <a   href="#">欢迎：${readerInfo.readername } 用户</a>
 						</li>
 						<li>
 							
-							 <a style="font-size:20px" href="${pageContext.request.contextPath }/borrowServlet?act=list">我的借阅记录</a>
+							 <a   href="${pageContext.request.contextPath }/borrowServlet?act=list">我的借阅记录</a>
 						</li>
 						<li class="dropdown">
-							 <a style="font-size:20px" href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
+							 <a   href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								
 								<li>
-									 <a style="font-size:20px" href="updateReaderInfo.jsp">个人信息修改</a>
+									 <a   href="updateReaderInfo.jsp">个人信息修改</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="updateReaderPassword.jsp">密码修改</a>
+									 <a   href="updateReaderPassword.jsp">密码修改</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/logoutServlet">退出</a>
+									 <a   href="${pageContext.request.contextPath }/logoutServlet">退出</a>
 								</li>
 								<li class="divider">
 								</li>
@@ -88,33 +83,35 @@
 		<!--表单开始-->
 			<form onsubmit="return checkAll()" class="form-horizontal" role="form" action="${pageContext.request.contextPath }/readerServlet?act=updatePassword" method="post" id="updatePasswordForm">
 			    <h2 style="color:red">${updatePasswordMsg }</h2>
-				<div class="form-group">
-					<label for="firstname" class="col-sm-2 control-label">请输入原密码：</label>
+				<div class="form-group" style="padding-left: 25%">
+					<label for="firstname" class="col-sm-3 control-label">请输入原密码:</label>
 					<div class="col-sm-4">
 						<input type="password" class="form-control" id="password" name="password" onblur="checkPassword()"
 							   placeholder="请输入原密码">
 					</div>
 					<span id="passwordMsg" style="color:red"></span> 
 				</div>
-				<div class="form-group">
-					<label for="lastname" class="col-sm-2 control-label">请输入新密码：</label>
+				<hr>
+				<div class="form-group" style="padding-left: 25%">
+					<label for="lastname" class="col-sm-3 control-label">请输入新密码:</label>
 					<div class="col-sm-4">
 						<input type="password" class="form-control" id="newPassword"  onblur="checkNewPassword()"
 							   placeholder="请输入新密码" />
 					</div>
 					<span id="newPasswordMsg" style="color:blue"><font>提示：密码长度6~18位，必须包含字母,数字或下划线</font></span>
 				</div>
-				<div class="form-group">
-					<label for="lastname" class="col-sm-2 control-label">请再次输入新密码：</label>
+				<hr>
+				<div class="form-group" style="padding-left: 25%">
+					<label for="lastname" class="col-sm-3 control-label">再次请输入新密码:</label>
 					<div class="col-sm-4">
 						<input type="password" class="form-control" id="reNewPassword" name="newpassword" onblur="checkReNewPassword()"
 							   placeholder="请再次输入新密码">
 					</div>
 					<span id="reNewPasswordMsg" style="color:red"></span>
 				</div>
-							    
-				<div class="form-group col-sm-3" >
-					<button type="submit" class="btn btn-primary" onclick="updatePassword()">修改</button>  
+				<hr>
+				<div class="form-group " style="text-align: center;">
+					<button type="submit" class="btn btn-primary" onclick="updatePassword()">修改</button>&nbsp; &nbsp;&nbsp; 
 					<button type="reset" class="btn btn-default">重置</button> 				 				    
 				</div>   
 							

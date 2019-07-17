@@ -15,37 +15,31 @@
 	
 	
 	
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
 	
-			<nav class="navbar navbar-default navbar-fixed-top  navbar-inverse" role="navigation">
+			<nav class="navbar navbar-default  navbar-inverse" role="navigation">
 				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a style="font-size:20px" class="navbar-brand" href="#">欢迎使用图书管理系统</a>
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a   class="navbar-brand" href="#">欢迎使用图书管理系统</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li >
-							 <a style="font-size:20px" href="${pageContext.request.contextPath }/booksServlet?act=search">馆藏查询</a>
+							 <a   href="${pageContext.request.contextPath }/booksServlet?act=search">馆藏查询</a>
 						</li>
 						
 						<li class="dropdown">
-							 <a style="font-size:20px" href="#" class="dropdown-toggle" data-toggle="dropdown">借阅中心<strong class="caret"></strong></a>
+							 <a   href="#" class="dropdown-toggle" data-toggle="dropdown">借阅中心<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 							
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/booksServlet?act=search">我要借阅</a>
+									 <a   href="${pageContext.request.contextPath }/booksServlet?act=search">我要借阅</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/borrowServlet?act=unReturnList">我要归还</a>
+									 <a   href="${pageContext.request.contextPath }/borrowServlet?act=unReturnList">我要归还</a>
 								</li>
 								<li class="divider">
 								</li>
@@ -56,28 +50,28 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 							
-							 <a style="font-size:20px" href="#">欢迎：${readerInfo.readername } 用户</a>
+							 <a   href="#">欢迎：${readerInfo.readername } 用户</a>
 						</li>
 						<li>
 							
-							 <a style="font-size:20px" href="${pageContext.request.contextPath }/borrowServlet?act=list">我的借阅记录</a>
+							 <a   href="${pageContext.request.contextPath }/borrowServlet?act=list">我的借阅记录</a>
 						</li>
 						<li class="dropdown">
-							 <a style="font-size:20px" href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
+							 <a   href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								
 								<li>
-									 <a style="font-size:20px" href="updateReaderInfo.jsp">个人信息修改</a>
+									 <a   href="updateReaderInfo.jsp">个人信息修改</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="updateReaderPassword.jsp">密码修改</a>
+									 <a   href="updateReaderPassword.jsp">密码修改</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a style="font-size:20px" href="${pageContext.request.contextPath }/logoutServlet">退出</a>
+									 <a   href="${pageContext.request.contextPath }/logoutServlet">退出</a>
 								</li>
 								<li class="divider">
 								</li>
@@ -90,9 +84,10 @@
 			
 		
 		<!--表单开始-->
-			<form onsubmit="return checkAll()" class="form-horizontal" role="form" action="${pageContext.request.contextPath }/readerServlet?act=updateInfo" method="post" id="readerInfoFrom"> 
-							
-				<div class="form-group" style="text-align: center;">
+			<form onsubmit="return checkAll()" class="form-horizontal" role="form" action="${pageContext.request.contextPath }/readerServlet?act=updateInfo" method="post" id="readerInfoFrom" > 
+					
+					
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">用户名<i style="color:red">*</i></label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="readername"  value="${readerInfo.readername }"
@@ -100,21 +95,22 @@
 					</div>
 					<span style="color:red"></span>
 				</div>
-				<div class="form-group" style="text-align: center;">
+				<hr>
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">手机号码<i style="color:red">*</i></label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="mobile" name="mobile" value="${readerInfo.mobile }" onblur="checkMobile()">
 					</div>
 					<span id="mobileMsg" style="color:red"></span>
 				</div>
-		
-				<div class="form-group" style="text-align: center;">
-					<div class="col-sm-offset-1 col-sm-10">					
+				<hr>
+				<div class="form-group" style="padding-left: 26.8%">
+					<div class="col-sm-offset-1 col-sm-8">					
 						<div class="radio">	
-							<label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别<i style="color:red">*</i>:</b></label>
+							<label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别<i style="color:red">*</i></b></label>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<label>
-								<input type="radio" name="sex" value="男" 
+							<label >
+								<input  type="radio" name="sex" value="男" 
 								 <c:if test="${readerInfo.sex == '男'}">
 								 checked="checked"
                                   </c:if>
@@ -132,10 +128,10 @@
 					</div>
 				</div>
 				
+				<hr>
 				
-				
-				<div class="form-group" style="text-align: center;">
-				    <label for="email" class="col-sm-2 control-label">院系：<i style="color:red">*</i></label>					       
+				<div class="form-group" style="padding-left: 30%">
+				    <label for="email" class="col-sm-2 control-label">院系<i style="color:red">*</i></label>					       
 				    <div class="col-sm-4">					  
 						<select class="form-control" name="department">
 							<option value="经济学院"
@@ -231,31 +227,32 @@
 	                        >蓝天书院</option>
 						</select>											
 				    </div>
-				</div>				 
+				</div>	
+				<hr>
+							 
 				<!-- <div class="form-group">
 					<label for="lastname" class="col-sm-2 control-label">上传文件</label>
 					<div class="col-sm-4">
 						<input type="file" name="file" />
 					</div>					
 				</div>	 -->			   
-				<div class="form-group" >
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">备注信息</label>
-					<div class="col-sm-4">
-						<textarea name="remarks" rows="3" cols="48" placeholder="备注信息">${readerInfo.remarks }
+					<div class="col-sm-4 ">
+						<textarea class="form-control" name="remarks" rows="3" cols="48" placeholder="备注信息">${readerInfo.remarks }
 						</textarea>
 					</div>
 					
 				</div>
-   				
+   				<hr>
    				 
 				<div class="form-group " style="text-align: center;">
-					<button type="submit" class="btn btn-primary" onclick="updateInfo()">修改</button>  
+					<button type="submit" class="btn btn-primary" onclick="updateInfo()">修改</button> &nbsp; &nbsp;&nbsp;  
 					<button type="reset" class="btn btn-default">重置</button> 				 				    
 				</div>   
 				 
 								
 		    </form>
-			
 			
 		
 	</body>
