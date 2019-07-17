@@ -128,7 +128,7 @@
 			                
 			            <div class="caption">
 			                <h3 style="color:black">${item.bookname }</h3>
-			                <div style="width:200px;height:60px; overflow:hidden;"><p ><em style="color:blue">图书简介：</em>${item.intro } ...</p></div>			              
+			                <div style="width:200px;height:60px; overflow:hidden;"><p ><em style="color:blue">图书简介：</em>${item.intro }</p></div>			              
 			                <p style="color:blue">馆藏数量：${item.booknum }本</p>
 			                <p>
 			                   <button type="button" class="btn btn-primary" onclick="details(${item.bookid })">查看详情</button>				                     
