@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter("/admins/*")
+@WebFilter(urlPatterns = {"/admins/*","/admin/*"})
 public class AdminFilter implements Filter {
 
     /**
@@ -42,7 +42,7 @@ public class AdminFilter implements Filter {
 		if(obj==null){
 			//用户尚未登录，转到login.jsp
 			HttpServletResponse resp = (HttpServletResponse)response;
-			resp.sendRedirect("../login.jsp");
+			resp.sendRedirect("/BookManager/login.jsp");
 		}
 		chain.doFilter(req, response);
 	}

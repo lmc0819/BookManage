@@ -117,9 +117,14 @@
 										<li class="divider">
 										</li>
 										<li>
-											 <a href="admins/newBook.jsp">新书入库管理</a>
+											 <a href="newBook.jsp">新书入库管理</a>
 										</li>
-										
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											 <a href="borrowinfo.jsp">图书借阅量</a>
+										</li>
 										
 									</ul>
 					</li>

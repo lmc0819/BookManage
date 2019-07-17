@@ -53,7 +53,12 @@
 										<li>
 											 <a href="admins/newBook.jsp">新书入库管理</a>
 										</li>
-										
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											 <a href="admins/borrowinfo.jsp">图书借阅量</a>
+										</li>
 										
 									</ul>
 					</li>
@@ -107,8 +112,8 @@
 							<input type="text" class="form-control"  name="select" />
 							<input type="hidden" name="act" value="SelectReader">
 						</div> 
-						<div class="form-group">
-							<select name="name">
+						<div style="height:34px; border-radius:5px" class="form-group">
+							<select style="height:34px; border-radius:5px" name="name">
 							<option value="姓名">姓名</option>
 							<option value="id">id</option>
 							</select>

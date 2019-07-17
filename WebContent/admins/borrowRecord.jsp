@@ -38,7 +38,12 @@
 										<li>
 											 <a href="admins/newBook.jsp">新书入库管理</a>
 										</li>
-										
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											 <a href="admins/borrowinfo.jsp">图书借阅量</a>
+										</li>
 										
 									</ul>
 					</li>
@@ -60,12 +65,12 @@
 									<ul class="dropdown-menu">
 																			
 										<li>
-											 <a href="personInfo.jsp">个人信息修改</a>
+											 <a href="admins/personInfo.jsp">个人信息修改</a>
 										</li>
 										<li class="divider">
 										</li>
 										<li>
-											 <a href="updatePassword.jsp">修改密码</a>
+											 <a href="admins/updatePassword.jsp">修改密码</a>
 										</li>
 											<li class="divider">
 										</li>
@@ -91,8 +96,8 @@
 						<div class="form-group">
 							<input type="text" class="form-control" name="value" />
 						</div> 
-						<div class="form-group">
-							<select name="name">
+						<div style="height:34px; border-radius:5px" class="form-group">
+							<select style="height:34px; border-radius:5px" name="name">
 							<option value="bookname">书名</option>
 							<option value="readername">读者</option>
 							<option value="id">id</option>
@@ -211,99 +216,7 @@
 		
 		    </div>
  			<!--弹出层结束-->
-<div id="main" style="width: 600px;height:400px;margin-left: 650px;"></div>
-					<script type="text/javascript">
-						// 基于准备好的dom，初始化echarts实例
-						var myChart = echarts.init(document.getElementById('main'));
 
-						// 指定图表的配置项和数据
-						option = {
-							title: {
-								text: '图书借阅量',
-							},
-							tooltip: {
-								trigger: 'axis'
-							},
-							legend: {
-								data: ['还书量', '借阅量']
-							},
-							toolbox: {
-								show: true,
-								feature: {
-									dataView: {
-										show: true,
-										readOnly: false
-									},
-									magicType: {
-										show: true,
-										type: ['line', 'bar']
-									},
-									restore: {
-										show: true
-									},
-									saveAsImage: {
-										show: true
-									}
-								}
-							},
-							calculable: true,
-							xAxis: [{
-								type: 'category',
-								data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-							}],
-							yAxis: [{
-								type: 'value'
-							}],
-							series: [{
-									name: '还书量',
-									type: 'bar',
-									data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-									markPoint: {
-										data: [{
-												type: 'max',
-												name: '最大值'
-											},
-											{
-												type: 'min',
-												name: '最小值'
-											}
-										]
-									},
-									markLine: {
-										data: [{
-											type: 'average',
-											name: '平均值'
-										}]
-									}
-								},
-								{
-									name: '借阅量',
-									type: 'bar',
-									data: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
-									markPoint: {
-										data: [{
-											type: 'max',
-											name: '最大值'
-										},
-										{
-											type: 'min',
-											name: '最小值'
-										}
-									]
-									},
-									markLine: {
-										data: [{
-											type: 'average',
-											name: '平均值'
-										}]
-									}
-								}
-							]
-						};
-
-						// 使用刚指定的配置项和数据显示图表。
-						myChart.setOption(option);
-					</script>
 
 	</body>
 </html>

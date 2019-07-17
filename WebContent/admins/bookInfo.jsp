@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	    
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css" />
@@ -67,7 +68,13 @@
 										<li class="divider">
 										</li>
 										<li>
-											 <a href="newBook.jsp">新书入库管理</a>
+											 <a href="admins/newBook.jsp">新书入库管理</a>
+										</li>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											 <a href="admins/borrowinfo.jsp">图书借阅量</a>
 										</li>
 										
 										
@@ -123,8 +130,8 @@
 						<div class="form-group">
 							<input type="text" class="form-control" name="value" />
 						</div> 
-						<div class="form-group">
-							<select name="name">
+						<div style="height:34px; border-radius:5px" class="form-group">
+							<select style="height:34px; border-radius:5px" name="name">
 							<option value="name">书名</option>
 							<option value="id">id</option>
 							<option value="category">分类</option>
