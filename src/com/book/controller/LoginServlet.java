@@ -90,7 +90,8 @@ public class LoginServlet extends HttpServlet {
 						}
 						//转发
 						request.getSession().setAttribute("readerInfo", readerInfo);
-						request.getRequestDispatcher("booksServlet?act=search").forward(request, response);					
+						response.sendRedirect("booksServlet?act=search");
+						/*request.getRequestDispatcher("booksServlet?act=search").forward(request, response);	*/				
 					}					
 				}else{
 					request.setAttribute("errorMsg", "用户名或者密码错误，请检查!");
@@ -141,7 +142,8 @@ public class LoginServlet extends HttpServlet {
 						}
 						//转发
 						session.setAttribute("admin", adminInfo);
-						request.getRequestDispatcher("admin?act=SelectAllReader").forward(request, response);					
+						response.sendRedirect("admin?act=SelectAllReader");
+						/*request.getRequestDispatcher("admin?act=SelectAllReader").forward(request, response);*/					
 					}
 					
 					
