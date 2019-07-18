@@ -174,25 +174,25 @@
 			<form class="form-horizontal" role="form" action="/BookManager/admin" >
 			<input type="hidden" class="form-control"  name="admid" value="${sessionScope.admin.admid }"/>
 			 <input type="hidden" class="form-control" name="act"  value="UpdateAdminPwd"/>
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 				
-					<label for="firstname" class="col-sm-2 control-label">请输入原密码：</label>
+					<label for="firstname" class="col-sm-3 control-label">请输入原密码：</label>
 					<div class="col-sm-4">
 						<input type="password" class="form-control" id="firstname" 
 							   placeholder="请输入原密码" autocomplete="off" onblur="validate(this)">
 					</div>
 					<span id="mess"></span>
 				</div>
-				<div class="form-group">
-					<label for="lastname" class="col-sm-2 control-label">请输入新密码：</label>
+				<div class="form-group" style="padding-left: 30%">
+					<label for="lastname" class="col-sm-3 control-label">请输入新密码：</label>
 					<div class="col-sm-4">
 						<input type="password" class="form-control" id="lastname" 
 							   placeholder="请输入新密码">
 					</div>
 					<span></span>
 				</div>
-				<div class="form-group">
-					<label for="lastname" class="col-sm-2 control-label">请再次输入新密码：</label>
+				<div class="form-group" style="padding-left: 30%">
+					<label for="lastname" class="col-sm-3 control-label">请再次输入新密码：</label>
 					<div class="col-sm-4">
 						<input type="password" class="form-control" id="lastname" 
 							name="pwd"   placeholder="请再次输入新密码" onblur="check(this)">
@@ -200,8 +200,8 @@
 					<span id="chec"></span>
 				</div>
 							    
-				<div class="form-group col-sm-3" >
-					<button type="submit" class="btn btn-primary">更改</button>  
+				<div class="form-group " style="text-align: center;">
+					<button type="submit" class="btn btn-primary">更改</button>  &nbsp; &nbsp;&nbsp;
 					<button type="reset" class="btn btn-default">重置</button> 				 				    
 				</div>   
 							

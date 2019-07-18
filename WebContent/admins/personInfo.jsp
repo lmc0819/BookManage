@@ -108,34 +108,34 @@
 			<form class="form-horizontal" role="form" action="/BookManager/admin">
 			  <input type="hidden" class="form-control" name="act"  value="UpdateAdmin"/>
 			<input type="hidden" class="form-control"  name="admid" value="${sessionScope.admin.admid }"/>
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="firstname" class="col-sm-2 control-label">管理员姓名</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="firstname" name="adminname" value="${sessionScope.admin.adminname }">
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">性别</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="sex" value="${sessionScope.admin.sex }">
 					</div>
 					
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">电话</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="mobile" value="${sessionScope.admin.mobile }">
 					</div>
 					
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">住址</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="address" value="${sessionScope.admin.address}">
 					</div>
 					
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">简介</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="remarks" value="${sessionScope.admin.remarks }">
@@ -144,8 +144,8 @@
 				</div>
 				
  
-				<div class="form-group col-sm-3" >
-					<button type="submit" class="btn btn-primary">修改</button>  
+				<div class="form-group " style="text-align: center;" >
+					<button type="submit" class="btn btn-primary">修改</button> &nbsp; &nbsp;&nbsp;  
 					<button type="reset" class="btn btn-default">重置</button> 
 				 				    
 				</div>   

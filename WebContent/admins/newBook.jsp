@@ -90,7 +90,7 @@
 			<!--表单开始-->
 			<form class="form-horizontal" role="form" action="/BookManager/Imgservlet" method="post" enctype="multipart/form-data">
 			          <input type="hidden" class="form-control" id="firstname" name="act" value="InsertBook">
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="firstname" class="col-sm-2 control-label">书名</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="firstname" name="bookname">
@@ -98,14 +98,14 @@
 				
 				</div>
 				<hr />
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">作者</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="author">
 					</div>
 				</div>
 				<hr />
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">出版社</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="phouse">
@@ -113,7 +113,7 @@
 				
 				</div>
 				<hr />
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">出版日期</label>
 					<div class="col-sm-4">
 						<input type="date" class="form-control" id="lastname" name="pdate">
@@ -122,7 +122,7 @@
 					
 				</div>
 				<hr />
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">简介</label>
 					<div class="col-sm-4">
 						<!-- <input type="textarea" class="form-control" id="lastname" name="intro"> -->
@@ -130,21 +130,21 @@
 					</div>
 				</div>
 				<hr />
-					<div class="form-group">
+					<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">数量</label>
 					<div class="col-sm-4">
 						<input type="number" class="form-control" id="lastname" name="booknum">
 					</div>
 				</div>
 				<hr />
-					<div class="form-group">
+					<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">位置</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="action">
 					</div>
 				</div>
 				<hr />
-					<div class="form-group">
+					<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">分类</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="lastname" name="category">
@@ -153,7 +153,7 @@
 				<hr />
 
 				 
-				<div class="form-group">
+				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">上传图片</label>
 					<div class="col-sm-4">
 						<input type="file" name="file" />
@@ -162,8 +162,8 @@
 				</div>
 				<hr />
 
-				<div class="form-group col-sm-3" >
-					<button type="submit" class="btn btn-primary">添加</button>  
+				<div class="form-group " style="text-align: center;">
+					<button type="submit" class="btn btn-primary">添加</button>&nbsp; &nbsp;&nbsp;   
 					<button type="reset" class="btn btn-default">重置</button> 
 				 				    
 				</div>   
