@@ -84,7 +84,7 @@ public class Img extends HttpServlet {
 				String filename = item.getName();
 				String subfix = filename.substring(filename.indexOf("."));
 				String nfilename = new Date().getTime()+subfix;
-				File file = new File("D:\\upload\\"+nfilename);
+				File file = new File("E:\\upload\\"+nfilename);
 				if(!file.exists()){
 					file.createNewFile();
 				}
@@ -98,7 +98,7 @@ public class Img extends HttpServlet {
 				}
 				is.close();
 				fos.close();
-				b.setPhoto(nfilename);
+				b.setPhoto("/image/"+nfilename);
 				admin.InsertBook(b);
 			}
 			}

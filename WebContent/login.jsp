@@ -95,7 +95,7 @@
 							</div>
 						</div>
 						<div class="col-xs-5" style="padding-top: 25px">
-							<img src="pictureCheckCode" id="CreateCheckCode">
+							<img src="${pageContext.request.contextPath }/pictureCheckCode" id="CreateCheckCode">
 							<a href="javascript:void(0)" onclick="myReload()" style="font-size:12px;color:blue">看不清,换一个</a>
 						</div>
 					</div>

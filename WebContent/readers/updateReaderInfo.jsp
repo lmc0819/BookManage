@@ -239,8 +239,7 @@
 				<div class="form-group" style="padding-left: 30%">
 					<label for="lastname" class="col-sm-2 control-label">备注信息</label>
 					<div class="col-sm-4 ">
-						<textarea class="form-control" name="remarks" rows="3" cols="48" placeholder="备注信息">${readerInfo.remarks }
-						</textarea>
+						<textarea class="form-control" name="remarks" rows="3" cols="48" placeholder="备注信息">${readerInfo.remarks }</textarea>
 					</div>
 					
 				</div>
